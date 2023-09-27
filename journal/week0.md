@@ -1,7 +1,5 @@
 # Week 0 — Billing and Architecture
 
-[Link Text](#destroy-your)
-
 ### Destroy Root Account, Set MFA, IAM Role
 
 Steps for creating IAM account:
