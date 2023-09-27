@@ -11,7 +11,11 @@ export FRONTEND_URL="*"`python3 -m flask run --host=0.0.0.0 --port=4567
 
 Unlock the ports as such:
 
-![Unlock Port](https://github.com/tashaffi/aws-bootcamp-cruddur-2023/blob/main/journal/Assets/Week1/unlock_ports)
+![Unlock Port](https://github.com/tashaffi/aws-bootcamp-cruddur-2023/blob/main/journal/Assets/Week1/unlock_ports.png)
+
+Check the backend is working correctly:
+
+![Backend API Response](https://github.com/tashaffi/aws-bootcamp-cruddur-2023/blob/main/journal/Assets/Week1/backend_response_JSON.png)
 
 
 The Dockerfiles 
