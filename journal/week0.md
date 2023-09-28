@@ -9,14 +9,14 @@ Steps for creating IAM account:
 
 I created an IAM user called `Tash IAM` with admin access. 
 
-![IAM User](https://github.com/tashaffi/aws-bootcamp-cruddur-2023/blob/main/journal/Assets/IAM%20user.png)
+![IAM User](https://github.com/tashaffi/aws-bootcamp-cruddur-2023/blob/main/journal/Assets/Week0/IAM%20user.png)
 
 To enable MFA, go to IAM > Users > Tash_IAM, in the Summary section there will be options to enable MFA.
 I used an authenticator app but there are other options. 
 
 IAM > Users > Tash_IAM > Assign MFA device
 
-![IAM MFA](https://github.com/tashaffi/aws-bootcamp-cruddur-2023/blob/main/journal/Assets/TASH_IAM_MFA.png)
+![IAM MFA](https://github.com/tashaffi/aws-bootcamp-cruddur-2023/blob/main/journal/Assets/Week0/TASH_IAM_MFA.png)
  
 ### Conceptual and Logical Diagram
 
@@ -24,18 +24,18 @@ IAM > Users > Tash_IAM > Assign MFA device
 
 Screenshot of conceptual diagram:
 
-![Conceptual Diagram](https://github.com/tashaffi/aws-bootcamp-cruddur-2023/blob/main/journal/Assets/Conceptual_Diagram.png)
+![Conceptual Diagram](https://github.com/tashaffi/aws-bootcamp-cruddur-2023/blob/main/journal/Assets/Week0/Conceptual_Diagram.png)
 
 [Logical Diagram Lucid Chart](https://lucid.app/lucidchart/64aead20-ef1b-473b-9d23-f3fe0867ebf9/edit?beaconFlowId=EFED65FF2B3FFEC5&invitationId=inv_89f06a26-4280-4840-8849-e38ca31c4f07&page=0_0#)
 
 Screenshot of logical diagram:
 
-![Logical Diagram](https://github.com/tashaffi/aws-bootcamp-cruddur-2023/blob/main/journal/Assets/Logical_Diagram.png)
+![Logical Diagram](https://github.com/tashaffi/aws-bootcamp-cruddur-2023/blob/main/journal/Assets/Week0/Logical_Diagram.png)
 
 ### CloudShell and AWS Credentials
 
 
-![AWS CloudShell](https://github.com/tashaffi/aws-bootcamp-cruddur-2023/blob/main/journal/Assets/CloudShell.png)
+![AWS CloudShell](https://github.com/tashaffi/aws-bootcamp-cruddur-2023/blob/main/journal/Assets/Week0/CloudShell.png)
 
 ### AWS CLI
 
@@ -43,11 +43,11 @@ In the `gitpod` workspace, AWS Cli can be installed by following the instruction
 
 The IAM user credentials can be added to the `gitpod` environment variables for persistently running AWS commands as an IAM user. This can be done by using `gp env` command to update the `AWS_ACCESS_KEY_ID`, `AWS_SECRET_ACCESS_KEY`, and `AWS_DEFAULT_REGION` variables.
 
-![AWS Cli](https://github.com/tashaffi/aws-bootcamp-cruddur-2023/blob/main/journal/Assets/AWS_Cli.png)
+![AWS Cli](https://github.com/tashaffi/aws-bootcamp-cruddur-2023/blob/main/journal/Assets/Week0/AWS_Cli.png)
 
 ### Billing Alert and Budget
 
 
-![AWS Billing Alert](https://github.com/tashaffi/aws-bootcamp-cruddur-2023/blob/main/journal/Assets/AWS_Billing_alert.png)
+![AWS Billing Alert](https://github.com/tashaffi/aws-bootcamp-cruddur-2023/blob/main/journal/Assets/Week0/AWS_Billing_alert.png)
 
-![AWS Budget](https://github.com/tashaffi/aws-bootcamp-cruddur-2023/blob/main/journal/Assets/AWS_budget.png)
+![AWS Budget](https://github.com/tashaffi/aws-bootcamp-cruddur-2023/blob/main/journal/Assets/Week0/AWS_budget.png)
