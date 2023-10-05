@@ -65,3 +65,7 @@ It is similar to the `/api/activities/home` endpoint.
 - Create a `notifications_activities.py` file in the `services` folder. Again it should be similar to `/api/activities/home`. 
 - Import everything to the `app.py` file from `notifications_activities.py`.
 - Add a new route called `/api/activities/notifications`. Don't forget to change the function from `data_home` to something else if you copied code from `/api/activities/home`.
+
+Check notifications endpoint: 
+
+![Check Notifications Backend](https://github.com/tashaffi/aws-bootcamp-cruddur-2023/blob/main/journal/Assets/Week1/backend_notifications.png)
