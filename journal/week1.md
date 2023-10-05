@@ -54,3 +54,14 @@ Check the images have been created:
 
 ![Check Docker Up](https://github.com/tashaffi/aws-bootcamp-cruddur-2023/blob/main/journal/Assets/Week1/check_docker_up.png)
 
+
+Separarely running the Dockerfiles will launch the frontend and backend apps at port 3000 and 4567 respectively, which we can check from `ports`.
+
+Creating the notifications endpoint:
+
+It is similar to the `/api/activities/home` endpoint.
+
+- Add `/api/activities/notifications` path to `paths` in the `openapi-3.0.yml` file. 
+- Create a `notifications_activities.py` file in the `services` folder. Again it should be similar to `/api/activities/home`. 
+- Import everything to the `app.py` file from `notifications_activities.py`.
+- Add a new route called `/api/activities/notifications`. Don't forget to change the function from `data_home` to something else if you copied code from `/api/activities/home`.

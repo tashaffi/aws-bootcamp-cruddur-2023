@@ -8,6 +8,7 @@ from services.user_activities import *
 from services.create_activity import *
 from services.create_reply import *
 from services.search_activities import *
+from services.notifications_activities import *
 from services.message_groups import *
 from services.messages import *
 from services.create_message import *
@@ -59,6 +60,11 @@ def data_create_message():
   else:
     return model['data'], 200
   return
+
+@app.route("/api/activities/notifications", methods=['GET'])
+def data_notifications():
+  data = NotificationsActivities.run()
+  return data, 200
 
 @app.route("/api/activities/home", methods=['GET'])
 def data_home():
