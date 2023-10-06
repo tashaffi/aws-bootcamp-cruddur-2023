@@ -69,3 +69,10 @@ It is similar to the `/api/activities/home` endpoint.
 Check notifications endpoint: 
 
 ![Check Notifications Backend](https://github.com/tashaffi/aws-bootcamp-cruddur-2023/blob/main/journal/Assets/Week1/backend_notifications.png)
+
+
+For frontend, the process is pretty similar to the `home` endpoint there. Simply add a new route `/notifications` to `App.js`. Create `NotificationsFeedPage.css` and `NotificationsFeedPage.js` files in the `pages` folder and import them in `App.js`. 
+
+Check notifications endpoint: 
+
+![Check Notifications Frontend](https://github.com/tashaffi/aws-bootcamp-cruddur-2023/blob/main/journal/Assets/Week1/frontend_notification.png)
