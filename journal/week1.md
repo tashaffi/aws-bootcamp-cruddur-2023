@@ -27,6 +27,8 @@ Check the backend and frontend is working correctly:
 ![Frontend API Response](https://github.com/tashaffi/aws-bootcamp-cruddur-2023/blob/main/journal/Assets/Week1/frontend_response.png)
 
 
+### Containerize Frontend and Backend
+
 The Dockerfiles 
 
 For containerizing both the apps, write a Dockerfile in the `backend-flask` and `frontend-react-js` folder as below.
@@ -57,7 +59,7 @@ Check the images have been created:
 
 Separarely running the Dockerfiles will launch the frontend and backend apps at port 3000 and 4567 respectively, which we can check from `ports`.
 
-Creating the notifications endpoint:
+### Creating the notifications endpoint
 
 It is similar to the `/api/activities/home` endpoint.
 
@@ -76,3 +78,52 @@ For frontend, the process is pretty similar to the `home` endpoint there. Simply
 Check notifications endpoint: 
 
 ![Check Notifications Frontend](https://github.com/tashaffi/aws-bootcamp-cruddur-2023/blob/main/journal/Assets/Week1/frontend_notification.png)
+
+
+### Adding DynamoDB Local and Postgres
+
+Under `services` in the `docker-compose.yml` file, add the following:
+
+```
+dynamodb-local:
+    # https://stackoverflow.com/questions/67533058/persist-local-dynamodb-data-in-volumes-lack-permission-unable-to-open-databa
+    # We needed to add user:root to get this working.
+    user: root
+    command: "-jar DynamoDBLocal.jar -sharedDb -dbPath ./data"
+    image: "amazon/dynamodb-local:latest"
+    container_name: dynamodb-local
+    ports:
+      - "8000:8000"
+    volumes:
+      - "./docker/dynamodb:/home/dynamodblocal/data"
+    working_dir: /home/dynamodblocal
+```
+ 
+For `postgres`, add the following under `services`:
+
+```
+db:
+    image: postgres:13-alpine
+    restart: always
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=password
+    ports:
+      - '5432:5432'
+    volumes: 
+      - db:/var/lib/postgresql/data
+```
+
+Don't forget to define a volume `db` that uses the `local` storage. This volume allows data to be persisted across container restarts or shared between multiple containers. Add the following to the end of the file:
+
+```
+volumes:
+  db:
+    driver: local
+```
+
+You can test connection to `dynamodb` using the code in this link: [challenge-dynamodb-local](https://github.com/100DaysOfCloud/challenge-dynamodb-local)
+
+
+
+
