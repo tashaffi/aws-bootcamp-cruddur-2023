@@ -124,6 +124,18 @@ volumes:
 
 You can test connection to `dynamodb` using the code in this link: [challenge-dynamodb-local](https://github.com/100DaysOfCloud/challenge-dynamodb-local)
 
+To interact with `postgres`, install the client by adding following commands to the `.gitpod.yml` file:
 
+```
+- name: postgres
+    init: |
+      curl -fsSL https://www.postgresql.org/media/keys/ACCC4CF8.asc|sudo gpg --dearmor -o /etc/apt/trusted.gpg.d/postgresql.gpg
+      echo "deb http://apt.postgresql.org/pub/repos/apt/ `lsb_release -cs`-pgdg main" |sudo tee  /etc/apt/sources.list.d/pgdg.list
+      sudo apt update
+      sudo apt install -y postgresql-client-13 libpq-dev
+```
 
+Install the `PostgreSQL` extension on VSCode from `cweijan`. Connect to it using password `password`. 
+
+![Test Database Connection](https://github.com/tashaffi/aws-bootcamp-cruddur-2023/blob/main/journal/Assets/Week1/postgre_connection.png)
 
